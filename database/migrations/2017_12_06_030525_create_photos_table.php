@@ -15,7 +15,7 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->index();
+            $table->integer('product_id')->index();
             $table->string('address');
             $table->timestamps();
         });
