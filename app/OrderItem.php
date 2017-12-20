@@ -13,4 +13,11 @@ class OrderItem extends Model
         'order_id',
         'amount',
     ];
+
+
+    public function orders() //  OrderItem (1) -> Order (n)
+    {
+        return $this->hasMany(Order::class);
+    }
+
 }

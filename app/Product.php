@@ -15,4 +15,15 @@ class Product extends Model
         'amount',
         'shelves',
     ];
+
+    public function category() //  Product (n) -> Category (1)
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function photo() //  Product (n) -> Photo (1)
+    {
+        return $this->belongsTo(Photo::class);
+    }
+
 }

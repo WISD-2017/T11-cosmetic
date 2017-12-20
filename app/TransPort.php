@@ -12,4 +12,11 @@ class TransPort extends Model
         'name',
         'cost',
     ];
+
+
+    public function orders() //  TransPort (1) -> Order (n)
+    {
+        return $this->hasMany(Order::class);
+    }
+
 }

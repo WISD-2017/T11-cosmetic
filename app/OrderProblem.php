@@ -13,4 +13,11 @@ class OrderProblem extends Model
         'order_id',
         'problem',
     ];
+
+
+    public function orders() //  OrderProblem (1) -> Order (n)
+    {
+        return $this->hasMany(Order::class);
+    }
+
 }
